@@ -1,0 +1,841 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100&display=swap');
+
+/*============ START GENERAL STYLE ============*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #25252C;
+    text-decoration: none;
+    list-style: none;
+}
+
+body
+{
+    --yellow: #f9861a;
+    --purple: #0b0a15;
+    --main-font:'Nunito Sans', sans-serif;
+    --sec-font:'Gothic A1', sans-serif;
+}
+
+.parent-centering
+{
+    position: relative;
+}
+
+.center
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container
+{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.grid-container
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-content: center;
+    height: inherit;
+}
+
+.grid-container > *
+{
+    align-self: center;
+}
+
+.default-section .left .title
+{
+    position: relative;
+}
+
+.default-section .left .title .num
+{
+    text-align: left;
+    font-size: 150px;
+    font-family: var(--sec-font);
+    font-weight: bold;
+    color: darkgray;
+    opacity: 0.5;
+    margin-left: 50px;
+}
+
+.default-section .left .title .section-name
+{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    color: var(--yellow);
+    font-family: var(--sec-font);
+    font-size: 20px;
+    letter-spacing: .2em;
+}
+
+.default-section .left .section-quote
+{
+    width: 60%;
+    margin-top: -80px;
+    margin-bottom: 40px;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+}
+
+.mini-section-title
+{
+    font-weight: 700;
+    border-left: 1px solid var(--yellow);
+    padding-left: 5px;
+    margin-bottom: 5px;
+    font-size: 1.7em
+}
+
+.default-section .left .text p
+{
+    text-align: justify;
+}
+
+.default-section,
+.colored-section
+{
+    padding: 70px 0px;
+}
+
+.colored-section
+{
+    background-color: var(--purple);
+    padding: 50px 0;
+    position: relative;
+}
+
+.colored-section  *
+{
+    color: white;
+}
+
+.colored-section .slide-down
+{
+    background: none;
+}
+
+/*
+** START NAVBAR & LOGO
+*/
+
+nav
+{
+    position: fixed;
+    z-index: 999999999999999;
+    width: 100%;
+    top: 25px;
+    height: 50px;
+    transition: all 0.4s ease-in-out;
+}
+.fixed-navbar
+{
+    background-color: #050505;
+    top: 0;
+}
+
+nav *
+{
+    color: white;
+}
+
+nav ul
+{
+    display: none;
+}
+
+.main-navbar .active
+{
+    color: var(--yellow) !important;
+}
+
+nav .mobile-nav-icon
+{
+    text-align: right;
+    font-size: 30px;
+}
+
+nav .logo,
+nav .navbar-element
+{
+    position: relative;
+}
+
+nav .cv-button
+{
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-nav
+{
+    position: fixed;
+    z-index: 99999999;
+    top: -100%;
+    left: 0;
+    background: #050505;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: all 0.4s ease 0.2s;
+}
+
+.mobile-nav > *
+{
+    opacity: 0;
+    transition: all 0.4s ease 0.7s;
+}
+
+.show-navbar
+{
+    top: 0 !important;
+    opacity: 1 !important;
+}
+
+.show-navbar > *
+{
+    opacity: 1 !important;
+}
+
+.mobile-nav ul
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(90% - 30px);
+    margin-left: 5%;
+    padding-left: 15px;
+    z-index: 9999999;
+}
+
+.mobile-nav ul li
+{
+    margin: 15px 0;
+    border-bottom: 0.1px solid darkgray;
+    padding-bottom: 15px;
+}
+
+.mobile-nav div
+{
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+    width: 100vw;
+    z-index: 9999999;
+}
+
+.mobile-nav div h3
+{
+    color: white;
+    border:1px solid;
+    display: inline;
+    padding: 10px 50px;
+}
+
+/*
+** START HEADER
+*/
+
+header
+{
+    background-image: url('../img/header.jpg');
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+header .text
+{
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+header .text p
+{
+    color: white;
+    font-size: 17px;
+    border-left: 3px solid var(--yellow);
+    padding-left: 5px;
+    width: 80%;
+}
+
+.social-icons,
+.slide-down
+{
+    position: absolute;
+    bottom: 50px;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    width: 80%;
+    left: 5%;
+}
+
+.social-icons li a
+{
+    color: white;
+    font-family: var(--sec-font);
+    font-size: 13px;
+}
+
+.slide-down
+{
+    display: block;
+    background: #050505;
+    width: auto;
+    border-radius: 50%;
+    right: 5%;
+    left: auto;
+    bottom: 80px;
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.slide-down i{
+    color: white;
+    font-size: 30px;
+    transition: all 0.3s;
+}
+
+.slide-down:hover
+{
+    background-color: white;
+}
+
+.slide-down:hover i
+{
+    color: var(--yellow);
+}
+
+.vertical-line-right
+{
+    position: absolute;
+    width: 130px;
+    height: 2px;
+    background: var(--yellow);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+    bottom: calc(-100% - 40px);
+}
+
+/*
+** START ABOUT ME SECTION
+*/
+
+.about
+{
+    padding: 100px 0;
+}
+
+.about .right
+{
+    display: none;
+}
+
+/*
+** START EDUCATION
+*/
+
+.education
+{
+    padding-bottom: 50px;
+}
+
+.education .items,
+.volun .item
+{
+    margin-top: 30px;
+}
+
+.education .items > div,
+.volun .item > div
+{
+    border-top: 1px solid #050505;
+    padding: 30px 0;
+}
+
+.education .items h5,
+.volun .item h5
+{
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.education .items span,
+.volun .item span
+{
+    display: block;
+    color: darkgray;
+    letter-spacing: 2px;
+}
+
+.education .items p,
+.volun .item p
+{
+    margin-top: 10px;
+}
+
+
+/*
+** START EXPERTISE
+*/
+
+.expertise .right
+{
+    margin-top: 40px;
+}
+
+.expertise .right > div
+{
+    margin: 30px 0;
+}
+
+.expertise .right h4
+{
+    letter-spacing: 3px;
+    font-family: var(--sec-font);
+    font-size: 1.3em;
+}
+
+.expertise .right .progress
+{
+    margin-top: 5px;
+    width: 100%;
+    height: 10px;
+    position: relative;
+    border: 1px solid var(--yellow)
+}
+
+.expertise .right .progress div
+{
+    position: absolute;
+    height: 100%;
+    background: var(--yellow);
+    top: 0;
+    left: 0;
+}
+
+.expertise .slide-down
+{
+    background: none;
+}
+
+/*
+** START WORKS
+*/
+
+.works
+{
+    margin: 50px 0 100px;
+}
+
+.works .right *
+{
+    color: white;
+}
+
+.works .right .item
+{
+    background-image: url('../img/avatar.jpg');
+    background-position:center;
+    background-size: cover;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    margin: 5px 0;
+}
+
+.works .right .item:after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--purple);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.works .right .item:hover:after
+{
+    opacity: 0.5;
+}
+
+.works .right .item:hover .text
+{
+    opacity: 1;
+    transform: translateY(-50%) translateX(0%);
+}
+
+.works .right .text
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-5%);
+    width: 95%;
+    margin: 0 2.5%;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    z-index: 9;
+}
+
+.works .right .text h4
+{
+    margin-bottom: 5px;
+}
+
+.works .right .text .icons
+{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.works .right .text .icons i
+{
+    margin: 0 10px;
+    font-size: 1.4em;
+    border: 1px solid;
+    padding: 7px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.works .right .text .icons i:hover
+{
+    color: var(--yellow);
+    background: white;
+}
+
+.works .right .text p
+{
+    text-align: justify;
+}
+
+.works .right .text span
+{
+    border-left: 1px solid var(--yellow);
+    padding-left: 5px;
+}
+
+/*
+** START AWARDS
+*/
+
+.awards .right h3
+{
+    font-family: var(--sec-font);
+    margin-bottom: 4px;
+    line-height: 1.8em
+}
+
+.awards .right > div
+{
+    margin: 30px 0;
+}
+
+.awards .right h3 span
+{
+    background-color: var(--yellow);
+    margin-right: 7px;
+    padding: 4px;
+}
+
+.awards .right h4
+{
+    color: darkgray;
+}
+
+/*
+** START VOLUNTEERING
+*/
+
+.volun .right img
+{
+    display: none;
+}
+
+/*
+** START FOOTER
+*/
+
+footer .right div
+{
+    margin-bottom: 40px
+}
+
+footer .right div h3
+{
+    font-family: var(--sec-font);
+    color: darkgray;
+    margin-bottom: 5px;
+}
+
+footer .right .email a
+{
+    color: var(--yellow);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+footer .right .social a
+{
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+    width: 100px;
+}
+
+footer .copyright p
+{
+    font-family: var(--sec-font);
+    font-size: 0.8em
+}
+/*
+=====================================*
+** WIDTH 900px
+*======================================
+*/
+@media(min-width:900px)
+{
+    
+    .default-section,
+    .colored-section
+    {
+        padding: 100px 0px;
+    }
+
+    /*
+    ** START NAVBAR
+    */
+
+    .grid-container
+    {
+        grid-template-columns: 30% 70%;
+    }
+
+    .mobile-nav-icon
+    {
+        display: none;
+    }
+
+    nav
+    {
+        height: 75px
+    }
+
+    nav ul
+    {
+        display: block;
+    }
+
+    nav ul li
+    {
+        display: inline-block;
+        margin:0 10px;
+        cursor: pointer;
+    }
+    
+    .main-navbar .active
+    {
+        color: var(--yellow) !important;
+    }
+    
+    nav .cv-button
+    {
+        display: block;
+        text-align: right;
+    }
+
+    nav .cv-button h3
+    {
+        display: inline-block;
+        padding: 10px;
+        width: 160px;
+        border: 1px solid white;
+        transition: all 0.4s;
+        text-align: center
+    }
+    
+    nav .cv-button h3:hover
+    {
+        background-color: white;
+        color: #505050;
+    }
+
+    /*
+    ** START HEADER
+    */
+    header .text p
+    {
+        font-size: 40px
+    }
+
+    .social-icons
+    {
+        width: 40%
+    }
+    
+    /*
+    ** START ABOUT ME
+    */
+    
+    .default-section
+    {
+        position: relative;
+    }
+    .default-section .container
+    {
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+    
+    .default-section .left .num
+    {
+        font-size: 13em !important;
+    }
+    
+    .default-section .left .section-quote
+    {
+        font-size: 3em;
+        width: 80%;
+        margin-top: -110px;
+    }
+
+    .default-section .left .text p
+    {
+        width: 80%;
+    }
+    
+    .default-section .right
+    {
+        display: block;
+    }
+
+    .default-section .right img
+    {
+        width: 80%;
+        transform: translate(-50px, 150px)
+    }
+    
+    .default-section:after
+    {
+        content: '';
+        position: absolute;
+        width: 40%;
+        height: calc(100%);
+        background: var(--yellow);
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    /*
+    ** START EDUCATION
+    */
+    .education .items,
+    .volun .item
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 50px
+    }
+    
+    /*
+    ** START WORKS
+    */
+    .works:after
+    {
+        display: none;
+    }
+    
+    .works .container
+    {
+        grid-template-columns: 1fr;
+    }
+    
+    .works .left .section-quote
+    {
+        width: 400px
+    }
+    
+    .works .right
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .works .right .item
+    {
+        margin: 0;
+    }
+    
+    .works .right .item .text
+    {
+        width: 70%;
+        margin: 0 15%;
+    }
+    
+    /*
+    ** START BOLUNTEERING
+    */
+
+    .volun
+    {
+        padding-top: 100px
+    }
+    
+    .volun .right img
+    {
+        display: block;
+        width: 300px;
+        border: 1px solid var(--yellow);
+    }
+}
+
+/*
+=====================================*
+** WIDTH 1100px
+*======================================
+*/
+@media(min-width:110px)
+{
+    /*
+    ** GENERAL STYLE
+    */
+    .container
+    {
+        width: 90%
+    }
+    .default-section .right img
+    {
+        transform: translate(-50px, 10px)
+    }
+    
+    /*
+    ** START WORKS
+    */
+
+    .works .right
+    {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
