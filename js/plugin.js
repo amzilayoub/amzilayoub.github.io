@@ -1,4 +1,21 @@
 $(document).ready(() => {
+
+    /*
+    ** SHOW Item when the item offset equal win / 2
+    */
+
+    function showOnScroll(mySection)
+    {
+        if ($(window).scrollTop() >= mySection.offset().top - $(window).height()/3) {
+            var item = mySection.find('.hide-item');
+            item.each(function (j) {
+                setTimeout(function () {
+                    item.eq(j).addClass('show-item');
+                }, 800 * Math.random() * 2);
+            });
+        }
+    }
+    showOnScroll($('header'));
     
     /*
     ** SHOW NAVBAR ON MOBILE DEVICE
@@ -25,7 +42,9 @@ $(document).ready(() => {
                 $('.main-navbar li a').removeClass('active');
                 $('a[href="#' + $(this).attr('id') + '"]').addClass('active');
             }
+            showOnScroll($(this));
         });
+        
     });
     
     /*

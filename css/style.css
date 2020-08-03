@@ -19,6 +19,29 @@ body
     --sec-font:'Gothic A1', sans-serif;
 }
 
+.link-hover
+{
+    transition: all 0.4s ease-in-out;
+}
+
+.link-hover:hover
+{
+    color: var(--yellow);
+}
+
+.hide-item
+{
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(30px);
+}
+
+.show-item
+{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
 .parent-centering
 {
     position: relative;
@@ -289,6 +312,7 @@ header .text p
     color: white;
     font-family: var(--sec-font);
     font-size: 13px;
+    cursor: pointer;
 }
 
 .slide-down
@@ -431,6 +455,12 @@ header .text p
     left: 0;
 }
 
+.expertise .right .tags span
+{
+    font-size: 0.8em;
+    opacity: 0.8;
+}
+
 .expertise .slide-down
 {
     background: none;
@@ -455,10 +485,70 @@ header .text p
     background-image: url('../img/avatar.jpg');
     background-position:center;
     background-size: cover;
-    height: 400px;
+    height: 450px;
     position: relative;
     overflow: hidden;
     margin: 5px 0;
+}
+
+.works .right .item:nth-child(1)
+{
+    background-image: url('../img/project/tech-support.png');
+}
+
+.works .right .item:nth-child(2)
+{
+    background-image: url('../img/project/ft-container.jpg');
+    background-position: left
+}
+
+.works .right .item:nth-child(3)
+{
+    background-image: url('../img/project/minishell.jpg');
+}
+
+.works .right .item:nth-child(4)
+{
+    background-image: url('../img/project/cub3d.png');
+}
+
+.works .right .item:nth-child(5)
+{
+    background-image: url('../img/project/ft-server.png');
+}
+
+.works .right .item:nth-child(6)
+{
+    background-image: url('../img/project/printf.gif');
+}
+
+.works .right .item:nth-child(7)
+{
+    background-image: url('../img/project/libft.png');
+}
+
+.works .right .item:nth-child(8)
+{
+    background-image: url('../img/project/ecomm.jpg');
+    background-position: top;
+}
+
+.works .right .item:nth-child(9)
+{
+    background-image: url('../img/project/studitech.png');
+    background-position: left;
+}
+
+.works .right .item:nth-child(10)
+{
+    background-image: url('../img/project/confessionV2.jpg');
+    background-position: left;
+}
+
+.works .right .item:nth-child(11)
+{
+    background-image: url('../img/project/oxygen.png');
+    background-position: left;
 }
 
 .works .right .item:after
@@ -476,7 +566,7 @@ header .text p
 
 .works .right .item:hover:after
 {
-    opacity: 0.5;
+    opacity: 0.9;
 }
 
 .works .right .item:hover .text
@@ -527,6 +617,7 @@ header .text p
 .works .right .text p
 {
     text-align: justify;
+    margin-bottom: 5px;
 }
 
 .works .right .text span
@@ -570,6 +661,11 @@ header .text p
 .volun .right img
 {
     display: none;
+}
+
+.volun .item p
+{
+    text-align: justify;
 }
 
 /*
@@ -815,7 +911,7 @@ footer .copyright p
 ** WIDTH 1100px
 *======================================
 */
-@media(min-width:110px)
+@media(min-width:1100px)
 {
     /*
     ** GENERAL STYLE
