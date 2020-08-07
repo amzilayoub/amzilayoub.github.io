@@ -276,6 +276,7 @@ header
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    position: relative;
 }
 
 header .text
@@ -285,6 +286,7 @@ header .text
     left: 5%;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 999;
 }
 
 header .text p
@@ -305,6 +307,7 @@ header .text p
     grid-template-columns: 30% 30% 30%;
     width: 80%;
     left: 5%;
+    z-index: 99999;
 }
 
 .social-icons li a
