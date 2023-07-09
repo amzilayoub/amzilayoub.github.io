@@ -454,7 +454,8 @@ header .text p {
 
 .experiences .right ul li{
 	position: relative;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
+	transition: all .3s ease-in-out;
 }
 
 .experiences .right ul li:before {
@@ -473,6 +474,24 @@ header .text p {
 .experiences .right ul li .company {
 	font-weight: bold;
 	color: var(--yellow);
+}
+
+.experiences .right ul li .skills
+{
+	opacity: 0;
+	transform: translateY(-10px);
+	transition: all .3s ease-in-out;
+}
+
+.experiences .right ul li:hover
+{
+	margin-bottom: 30px;
+}
+
+.experiences .right ul li:hover .skills
+{
+	opacity: 1;
+	transform: translateY(0px);
 }
 
 /*
