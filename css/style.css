@@ -435,6 +435,47 @@ header .text p {
 }
 
 /*
+** START EXPERIENCES
+*/
+
+.experiences .right ul {
+	position: relative;
+}
+
+.experiences .right ul:before {
+	content: '';
+	display: block;
+	width: 2px;
+	height: 100%;
+	background-color: var(--yellow);
+	position: absolute;
+	left: -26px;
+}
+
+.experiences .right ul li{
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.experiences .right ul li:before {
+	content: '';
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-color: var(--yellow);
+	border-radius: 50%;
+	position: absolute;
+	left: -40px;
+	top: -5px;
+	border: 5px solid var(--purple);
+}
+
+.experiences .right ul li .company {
+	font-weight: bold;
+	color: var(--yellow);
+}
+
+/*
 ** START WORKS
 */
 
@@ -457,35 +498,30 @@ header .text p {
 }
 
 .works .right .item:nth-child(1) {
-	background-image: url("../img/project/tech-support.png");
+	
 }
 
 .works .right .item:nth-child(2) {
-	background-image: url("../img/project/ft-container.jpg");
-	background-position: left;
-}
-
-.works .right .item:nth-child(3) {
 	background-image: url("../img/project/minishell.jpg");
 }
 
-.works .right .item:nth-child(4) {
+.works .right .item:nth-child(3) {
 	background-image: url("../img/project/cub3d.png");
 }
 
-.works .right .item:nth-child(5) {
+.works .right .item:nth-child(4) {
 	background-image: url("../img/project/ft-server.png");
 }
 
-.works .right .item:nth-child(6) {
+.works .right .item:nth-child(5) {
 	background-image: url("../img/project/printf.gif");
 }
 
-.works .right .item:nth-child(7) {
+.works .right .item:nth-child(6) {
 	background-image: url("../img/project/libft.png");
 }
 
-.works .right .item:nth-child(8) {
+.works .right .item:nth-child(7) {
 	background-image: url("../img/project/ecomm.jpg");
 	background-position: top;
 }
@@ -762,6 +798,14 @@ footer .copyright p {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-column-gap: 50px;
+	}
+
+	/*
+    ** START EXPERIENCES
+    */
+
+	.experiences:after {
+		display:none
 	}
 
 	/*
